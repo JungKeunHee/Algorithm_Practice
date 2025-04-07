@@ -32,7 +32,7 @@ public class Merge_01 {
         }
 
         Arrays.sort(c);
-        
+
         return c;
     }
 

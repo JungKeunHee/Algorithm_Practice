@@ -13,6 +13,9 @@ package algorithm_practice.fifth_week;
 //코니와 브라운의 위치 p는 조건 0 <= x <= 200,000을 만족한다.
 //브라운은 범위를 벗어나는 위치로는 이동할 수 없고, 코니가 범위를 벗어나면 게임이 끝난다
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Line_01 {
     public static void main(String[] args) {
         int c = 11;
@@ -22,7 +25,30 @@ public class Line_01 {
     }
 
     public static int catchMe(int c, int b) {
+        final int MAX = 200000;
+        boolean[][] visited = new boolean[2][MAX + 1];
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(b);
+        visited[0][b] = true;
 
-        return 0;
+        int time = 0;
+        while (true) {
+            int cony = c + time * (time + 1) / 2;
+            if (cony > MAX) return -1; // 코니가 범위 밖이면 실패
+
+            if (visited[time % 2][cony]) return time; // 브라운이 코니를 잡음
+
+            time++;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int now = queue.poll();
+                for (int next : new int[]{now - 1, now + 1, now * 2}) {
+                    if (next >= 0 && next <= MAX && !visited[time % 2][next]) {
+                        visited[time % 2][next] = true;
+                        queue.offer(next);
+                    }
+                }
+            }
+        }
     }
 }

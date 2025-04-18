@@ -36,7 +36,7 @@ public class Samsung_01 {
         for (int i = 0; i < K; i++) {
             Horse h = horses[i];
             board[h.row][h.col].add(i); // 말 번호 i를 칸에 쌓음
-        }
+        } 
 
         System.out.println(simulate());
     }

@@ -85,7 +85,7 @@ public class Samsung_01 {
         for (int num : moving) {
             horses[num].row = nr;
             horses[num].col = nc;
-            board[nr][nc].add(num);
+            board[nr][nc].add(num); 
         }
 
         // 종료 조건

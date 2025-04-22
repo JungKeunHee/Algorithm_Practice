@@ -89,7 +89,7 @@ public class Samsung_01 {
         }
 
         // 종료 조건
-        return board[nr][nc].size() >= 4;
+        return board[nr][nc].size() >= 4; 
     }
 
     static boolean inRange(int r, int c) {

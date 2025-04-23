@@ -36,7 +36,7 @@ public class Line_03 {
        queue.add(b);
        visited[0][b] = true;
 
-       int time = 0;
+       int time = 0; 
        while (true) {
            int cony = c + time * (time + 1) / 2;
 

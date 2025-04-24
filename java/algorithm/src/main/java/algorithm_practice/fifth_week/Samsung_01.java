@@ -13,7 +13,7 @@ public class Samsung_01 {
 
     public static void main(String[] args) {
         map = new int[][]{
-                {0, 0, 0, 0}, 
+                {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0}
@@ -49,6 +49,7 @@ public class Samsung_01 {
         }
         return -1;
     }
+    
 
     static boolean move(int i) {
         Horse h = horses[i];

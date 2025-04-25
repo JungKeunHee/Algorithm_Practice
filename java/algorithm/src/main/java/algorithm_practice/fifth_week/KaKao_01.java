@@ -31,7 +31,7 @@ package algorithm_practice.fifth_week;
 public class KaKao_01 {
     public static void main(String[] args) {
 
-        String input = "abcabcabcabcdededededede"; // 14
+        String input = "abcabcabcabcdededededede"; // 14 
 
         System.out.println("정답 = 14 / 현재 풀이 값 = " + stringCompression(input));
         System.out.println("정답 = 3 / 현재 풀이 값 = " + stringCompression("JAAA"));

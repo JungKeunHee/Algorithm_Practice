@@ -58,7 +58,7 @@ public class Samsung_01 {
         int d = h.dir;
 
         int nr = r + dr[d];
-        int nc = c + dc[d];
+        int nc = c + dc[d]; 
 
         // 이동 전 말 스택 확인
         List<Integer> stack = board[r][c];

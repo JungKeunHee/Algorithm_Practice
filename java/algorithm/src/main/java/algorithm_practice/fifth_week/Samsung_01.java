@@ -56,7 +56,7 @@ public class Samsung_01 {
         int r = h.row;
         int c = h.col;
         int d = h.dir;
-
+ 
         int nr = r + dr[d];
         int nc = c + dc[d]; 
 

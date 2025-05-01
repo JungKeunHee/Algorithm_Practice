@@ -24,7 +24,7 @@ public class FindMaxNum_01 {
                 max_number = array[i];
             }
         }
-
+ 
         return max_number;
     }
 }

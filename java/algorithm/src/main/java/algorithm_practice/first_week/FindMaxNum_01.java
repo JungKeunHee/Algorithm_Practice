@@ -25,6 +25,6 @@ public class FindMaxNum_01 {
             }
         }
  
-        return max_number;
+        return max_number; 
     }
 }

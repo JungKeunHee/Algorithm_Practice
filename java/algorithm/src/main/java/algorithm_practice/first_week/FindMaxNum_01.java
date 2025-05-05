@@ -20,7 +20,7 @@ public class FindMaxNum_01 {
         for (int i = 0; i < array.length; i++) {
 
             // 3. 만약 현재 인덱스 데이터 값이 max_number 보다 크다면 max_number 값을 array[i] 값으로 넣어준다.
-            if (array[i] > max_number) {
+            if (array[i] > max_number) { 
                 max_number = array[i];
             }
         }

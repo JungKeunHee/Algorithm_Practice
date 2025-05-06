@@ -62,7 +62,7 @@ public class Samsung_01 {
 
         // 이동 전 말 스택 확인
         List<Integer> stack = board[r][c];
-        int idx = stack.indexOf(i);
+        int idx = stack.indexOf(i); 
         List<Integer> moving = new ArrayList<>(stack.subList(idx, stack.size()));
         stack.subList(idx, stack.size()).clear();
 

@@ -20,7 +20,7 @@ public class FindMaxNum_04 {
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 isAllpositive = false;
-            } else if (array[i] == 0) {
+            } else if (array[i] == 0) { 
                 isAllpositive = false;
             }
         }

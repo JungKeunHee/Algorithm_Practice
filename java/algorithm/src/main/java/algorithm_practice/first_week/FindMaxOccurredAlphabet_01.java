@@ -25,7 +25,7 @@ public class FindMaxOccurredAlphabet_01 {
         char maxChar = 'a';
 
         for (int i = 0; i < 26; i++) {
-            if (alphabet[i] > maxCount) {
+            if (alphabet[i] > maxCount) { 
                 maxCount = alphabet[i];
                 maxChar = (char) (i + 'a');
             }

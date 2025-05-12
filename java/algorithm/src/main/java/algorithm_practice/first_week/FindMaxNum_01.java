@@ -14,7 +14,7 @@ public class FindMaxNum_01 {
     public static int findMaxNum(int[] array) {
 
         // 1. 첫 번째 인덱스가 최댓값으로 초기화
-        int max_number = array[0];
+        int max_number = array[0]; 
 
         // 2. 반복문 실행
         for (int i = 0; i < array.length; i++) {

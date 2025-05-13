@@ -17,7 +17,7 @@ public class IsAvailableToOrder_02 {
             if (!menusArray.contains(order)) {
                 isTrue = false;
                 break;
-            }
+            } 
         }
 
         System.out.println("isTrue = " + isTrue);

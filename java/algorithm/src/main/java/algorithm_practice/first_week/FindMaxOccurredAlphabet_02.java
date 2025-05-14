@@ -34,7 +34,7 @@ public class FindMaxOccurredAlphabet_02 {
             int count = map.get(key);
 
             if (count > maxCount) {
-                maxCount = count;
+                maxCount = count; 
                 result = key;
             } else if (count == maxCount) {
                 // 사전순 비교 (더 앞선 단어로 교체)

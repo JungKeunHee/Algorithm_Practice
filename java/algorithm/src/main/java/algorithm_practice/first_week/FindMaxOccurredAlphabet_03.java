@@ -31,7 +31,7 @@ public class FindMaxOccurredAlphabet_03 {
         for (String key : map.keySet()) {
             int count = map.get(key);
 
-            if (count > maxCount) {
+            if (count > maxCount) { 
                 maxCount = count;
                 result = key;
             } else if (maxCount >= 3 && maxCount == count) {

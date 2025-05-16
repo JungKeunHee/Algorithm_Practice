@@ -16,7 +16,7 @@
         public static List<Integer> findPrimeListUnderNumber(int number) {
             List<Integer> array = new ArrayList<>();
 
-            for (int i = 2; i <= number; i++) {
+            for (int i = 2; i <= number; i++) { 
                 if (isPrime(i)) {
                     array.add(i);
                 }

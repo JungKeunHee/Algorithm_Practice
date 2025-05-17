@@ -23,6 +23,6 @@ public class GetCountOfWaysToTarget_01 {
         int plus = dfs(numbers, index + 1, sum + numbers[index], target);
         int minus = dfs(numbers, index + 1, sum - numbers[index], target);
 
-        return plus + minus;
+        return plus + minus; 
     }
 }

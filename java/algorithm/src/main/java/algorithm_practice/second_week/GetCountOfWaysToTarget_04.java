@@ -22,7 +22,7 @@ public class GetCountOfWaysToTarget_04 {
         }
 
         if (index == nums.length) {
-            return 0; 
+            return 0;
         }
 
         int mul = dfs(nums, index + 1, count - 1, multiply * nums[index], target);

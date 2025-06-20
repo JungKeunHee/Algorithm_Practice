@@ -16,7 +16,7 @@ public class IsAvailableToOrder_03 {
         for (String order : orders) {
             if (!menusArray.contains(order)) {
                 isTrue = false;
-                break;
+                break; 
             } 
         }
 

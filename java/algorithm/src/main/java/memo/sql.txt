@@ -1,0 +1,146 @@
+✅ 1. 기본 문법 & 개념
+
+🔹 SELECT, WHERE, ORDER BY, GROUP BY, HAVING 차이
+
+SELECT: 조회
+
+WHERE: 조건 필터 (그룹화 전에 작동)
+
+GROUP BY: 특정 컬럼 기준 그룹화
+
+HAVING: 그룹화 이후 조건 필터
+
+ORDER BY: 정렬 (ASC/DESC)
+
+🔹 DISTINCT
+
+중복 제거
+
+sql
+복사
+편집
+SELECT DISTINCT name FROM users;
+🔹 LIMIT
+
+결과 행 개수 제한
+
+sql
+복사
+편집
+SELECT * FROM table LIMIT 5;
+✅ 2. JOIN 관련
+
+🔹 JOIN 종류와 차이
+
+JOIN 종류	설명
+INNER JOIN	두 테이블 모두 일치하는 행만 조회
+LEFT JOIN	왼쪽 테이블은 무조건 유지, 오른쪽 테이블은 일치할 때만
+RIGHT JOIN	오른쪽 테이블은 무조건 유지
+FULL OUTER	양쪽 테이블 모두 포함 (MySQL은 직접 지원 X → UNION)
+CROSS JOIN	모든 조합 (곱집합)
+
+🔹 예시
+
+sql
+복사
+편집
+SELECT *
+FROM orders o
+JOIN users u ON o.user_id = u.id;
+✅ 3. 인덱스 (Index)
+
+🔹 인덱스란?
+
+테이블의 검색 속도 향상을 위한 자료구조 (B-Tree 구조)
+
+🔹 언제 쓰나요?
+
+WHERE, JOIN, ORDER BY, GROUP BY 자주 사용하는 컬럼에
+
+🔹 단점?
+
+INSERT, UPDATE, DELETE 시 느려질 수 있음 (인덱스도 같이 갱신됨)
+
+✅ 4. 서브쿼리 & 집계 함수
+
+🔹 집계 함수 (Aggregate)
+
+COUNT(), SUM(), AVG(), MIN(), MAX()
+
+그룹 단위의 값 계산
+
+🔹 서브쿼리 (Subquery)
+
+쿼리 안의 쿼리
+
+sql
+복사
+편집
+SELECT name FROM users
+WHERE id IN (SELECT user_id FROM orders);
+🔹 EXISTS vs IN
+
+EXISTS: 존재 여부만 확인 (더 빠름)
+
+IN: 실제 값 비교 (소규모 데이터 OK, 많으면 느림)
+
+✅ 5. 정규화 vs 비정규화
+
+🔹 정규화(Normalization)
+
+중복 제거, 무결성 유지, 효율적 데이터 관리
+대표적으로 1NF, 2NF, 3NF 등
+
+🔹 비정규화(Denormalization)
+
+조인 줄이고, 성능 향상을 위해 일부러 중복 허용
+조회 속도 향상이 목표
+
+✅ 6. 기타 실무형 질문
+
+🔹 NULL 비교 방법
+
+sql
+복사
+편집
+-- 잘못된 방법 ❌
+WHERE column = NULL
+
+-- 올바른 방법 ⭕
+
+WHERE column IS NULL
+🔹 UNION vs UNION ALL
+
+UNION: 중복 제거
+UNION ALL: 중복 허용 (빠름)
+
+🔹 트랜잭션(Transaction) 4대 특성 (ACID)
+
+Atomicity (원자성): 모두 성공 또는 모두 실패
+Consistency (일관성): 정해진 규칙 유지
+Isolation (격리성): 동시에 여러 트랜잭션이 독립적으로
+Durability (지속성): 커밋된 데이터는 영구 저장
+
+✅ 요약 표 정리
+
+항목	요약
+JOIN	INNER / LEFT / RIGHT / CROSS
+인덱스	빠른 조회 but 쓰기 속도 저하
+집계 함수	SUM, COUNT 등
+서브쿼리	쿼리 안의 쿼리 (IN, EXISTS)
+정규화/비정규화	중복 제거 vs 성능 향상
+트랜잭션	ACID 원칙 준수
+
+✅ 예시
+🔹 UNION
+SELECT name FROM store_a
+UNION
+SELECT name FROM store_b;
+같은 이름이 여러 테이블에 있어도 한 번만 나옴
+
+🔹 UNION ALL
+SELECT name FROM store_a
+UNION ALL
+SELECT name FROM store_b;
+같은 이름이 여러 번 나오면 중복 그대로 출력됨
+

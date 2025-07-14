@@ -13,21 +13,16 @@ HAVING: 그룹화 이후 조건 필터
 ORDER BY: 정렬 (ASC/DESC)
 
 🔹 DISTINCT
-
 중복 제거
 
-sql
-복사
-편집
 SELECT DISTINCT name FROM users;
+
 🔹 LIMIT
 
 결과 행 개수 제한
 
-sql
-복사
-편집
 SELECT * FROM table LIMIT 5;
+
 ✅ 2. JOIN 관련
 
 🔹 JOIN 종류와 차이
@@ -41,12 +36,10 @@ CROSS JOIN	모든 조합 (곱집합)
 
 🔹 예시
 
-sql
-복사
-편집
 SELECT *
 FROM orders o
 JOIN users u ON o.user_id = u.id;
+
 ✅ 3. 인덱스 (Index)
 
 🔹 인덱스란?

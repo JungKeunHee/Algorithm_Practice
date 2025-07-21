@@ -34,6 +34,9 @@ RIGHT JOIN	오른쪽 테이블은 무조건 유지
 FULL OUTER	양쪽 테이블 모두 포함 (MySQL은 직접 지원 X → UNION)
 CROSS JOIN	모든 조합 (곱집합)
 
+이너 조인 (INNER JOIN)	두 테이블 모두에서 조건을 만족하는 행만 가져옴 (교집합 개념)
+아우터 조인 (OUTER JOIN)	한쪽 또는 양쪽 테이블의 모든 행을 유지하면서 조건 불일치 시 NULL로 채움 (합집합 비슷)
+
 🔹 예시
 
 SELECT *
@@ -66,11 +69,9 @@ COUNT(), SUM(), AVG(), MIN(), MAX()
 
 쿼리 안의 쿼리
 
-sql
-복사
-편집
 SELECT name FROM users
 WHERE id IN (SELECT user_id FROM orders);
+
 🔹 EXISTS vs IN
 
 EXISTS: 존재 여부만 확인 (더 빠름)
@@ -93,9 +94,6 @@ IN: 실제 값 비교 (소규모 데이터 OK, 많으면 느림)
 
 🔹 NULL 비교 방법
 
-sql
-복사
-편집
 -- 잘못된 방법 ❌
 WHERE column = NULL
 
